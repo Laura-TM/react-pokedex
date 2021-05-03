@@ -1,38 +1,177 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+/* Logo */
+
+.basic-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rebeccapurple;
+}
+
+.header {
+  font-size: 40px;
+  color: rebeccapurple;
+}
+
+/* BestPokemon */
+
+.abilities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rebeccapurple;
+}
+
+.favourite {
+  font-size: 30px;
+}
+
+.abilities ul {
+  margin: 0;
+}
+
+/* CaughtPokemon */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.updating-info {
+  width: 90%;
+  margin: 15px;
+  border: thin dotted #b26cbb;
+  padding: 20px;
+  display: grid;
+  grid-template-areas:
+    "head content"
+    "main content"
+    "sidebar content"
+    "footer content";
+}
+
+.mi-frase {
+  grid-area: head;
+  padding: 10px;
+  color: rgb(146, 145, 145);
+  font-size: 14px;
+}
+
+.mi-frase,
+.input-field {
+  width: 80%;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border: medium solid #56144d;
+}
+
+.input-field {
+  grid-area: sidebar;
+  margin: 20px 0;
+}
+
+.your-pokemon,
+.random-pokemon {
+  color: rgb(92, 58, 35);
+  height: 50px;
+  width: 80%;
+  font-weight: bolder;
+  border-radius: 10px;
+  background-color: gold;
+  border: medium ridge goldenrod;
+}
+
+.random-pokemon {
+  grid-area: main;
+}
+
+.your-pokemon {
+  grid-area: footer;
+  margin-bottom: 10px;
+}
+
+.added-items {
+  grid-area: content;
+  -webkit-columns: 2; /* Chrome, Safari, Opera */
+  -moz-columns: 2; /* Firefox */
+  columns: 2;
+  padding-right: 30px;
+}
+
+/* PokemonMoves */
+
+.container {
+  -webkit-columns: 5; /* Chrome, Safari, Opera */
+  -moz-columns: 5; /* Firefox */
+  columns: 5;
+  margin-bottom: 30px;
+}
+
+.container p {
+  -webkit-column-span: all; /* Chrome, Safari, Opera */
+  column-span: all;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  color: #56144d;
+  font-weight: bolder;
+}
+
+.container ul li {
+  color: #56144d;
+  margin-right: 10px;
+}
+
+/* PokemonMovesSelector */
+
+.button-container {
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.close-button,
+.bulbasaur-button,
+.charmander-button {
+  margin: 10px auto;
+  width: 80%;
+  height: 30px;
+  font-weight: bold;
+  border-radius: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bulbasaur-button {
+  background-color: rgb(0, 174, 255);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.charmander-button {
+  background-color: rgb(0, 255, 179);
+}
+
+.close-button {
+  background-color: rgb(241, 141, 225);
+  margin-bottom: 20px;
+}
+
+/* PokemonCity */
+
+.city-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-text {
+  height: 40px;
+  width: 30%;
+  margin-right: 70px;
+  border-radius: 8px;
+  border: medium solid #5d3dec;
+  text-align: center;
 }
